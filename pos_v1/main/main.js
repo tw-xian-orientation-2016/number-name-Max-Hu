@@ -87,3 +87,28 @@ function addUnit(translatedArr,units){
   return unitArr.reverse();
 }
 
+function mergeUnits(unitArr){
+  var output = '';
+  unitArr.forEach( function(element, index){
+    if (index != 0){
+      if (element.indexOf(' and ') < 0) {
+        output = output + ' and ' + element;
+      }else {
+        output = output + ', ' + element;
+      }
+    } else {
+      output += element;
+    }
+  });
+
+  return output;
+}
+
+function SpellOutNumber(input){
+  var splitArr = splitInput(input);
+  var translatedArr = translateStr(splitArr,loadDictionary());
+  var unitArr = addUnit(translatedArr,loadUnit());
+  var output = mergeUnits(unitArr);
+  console.log(output);
+
+}
