@@ -73,3 +73,17 @@ function getLastTwoBits(numberStr,dictionary){
   return lastTwoBits;
 }
 
+function addUnit(translatedArr,units){
+  var reverseTranslatedArr = translatedArr.reverse();
+  var unitArr = [];
+  translatedArr.forEach( function(element,index){
+    if (index != 0){
+      var unitElement = element + ' ' + units[index - 1];
+    } else {
+      unitElement = element;
+    }
+    unitArr.push(unitElement);
+  });
+  return unitArr.reverse();
+}
+
