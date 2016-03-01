@@ -30,7 +30,7 @@ function loadDictionary() {
   };
 }
 
-function laodUnit(){
-  return ['hundred','thousand','million'];
+function loadUnit(){
+  return ['thousand','million'];
 };
 
