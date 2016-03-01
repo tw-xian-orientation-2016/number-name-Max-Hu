@@ -24,9 +24,9 @@ function loadDictionary() {
     40:'forty',
     50:'fifty',
     60:'sixty',
-    70:'seventeen',
-    80:'eighteen',
-    90:'nineteen',
+    70:'seventy',
+    80:'eighty',
+    90:'ninety',
   };
 }
 
