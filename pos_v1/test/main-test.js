@@ -57,5 +57,12 @@ describe('pos', function() {
     expect(result).toEqual(outputs);
   });
 
+  it('should merge unit correctly', function() {
+    var inputs = [ 'two hundred and forty five million','one hundred and twelve thousand', 'forty three'];
+    var outputs =  'two hundred and forty five million, one hundred and twelve thousand and forty three';
+    var result = mergeUnits(inputs);
+    expect(result).toEqual(outputs);
+  });
+
 
 });
