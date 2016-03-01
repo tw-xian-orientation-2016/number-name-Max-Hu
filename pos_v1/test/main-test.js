@@ -50,4 +50,12 @@ describe('pos', function() {
     expect(result).toEqual(outputs);
   });
 
+  it('should add unit correctly', function() {
+    var inputs = [ 'two hundred and forty five','one', 'forty three'];
+    var outputs = [ 'two hundred and forty five million','one thousand', 'forty three'];
+    var result = addUnit(inputs,loadUnit());
+    expect(result).toEqual(outputs);
+  });
+
+
 });
