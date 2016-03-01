@@ -11,7 +11,7 @@ describe('pos', function() {
 
   it('should print correct text', function() {
 
-    var input = ['99','300','310','1501','12609','512607','43112603'];
+    var input = ['99','300','310','1501','12609','512607','43112603','245112043','5002043'];
 
     var output = [
       'ninety nine',
@@ -20,7 +20,9 @@ describe('pos', function() {
       'one thousand, five hundred and one',
       'twelve thousand, six hundred and nine',
       'five hundred and twelve thousand, six hundred and seven',
-      'forty three million, one hundred and twelve thousand, six hundred and three'
+      'forty three million, one hundred and twelve thousand, six hundred and three',
+      'two hundred and forty five million, one hundred and twelve thousand and forty three',
+      'five million and two thousand and forty three'
     ];
 
     spyOn(console, 'log');
