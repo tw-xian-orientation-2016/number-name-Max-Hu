@@ -11,7 +11,7 @@ describe('pos', function() {
 
   it('should print correct text', function() {
 
-    var input = [99,300,310,1501,12609,512607,43112603];
+    var input = ['99','300','310','1501','12609','512607','43112603'];
 
     var output = [
       'ninety nine',
@@ -35,13 +35,19 @@ describe('pos', function() {
   });
 
   it('should split string correctly', function() {
-    var inputs = [99,300,1501,12609,512607,43112603];
+    var inputs = ['99','300','1501','12609','512607','43112603'];
     var outputs = [['99'],['300'],['1','501'],['12','609'],['512','607'],['43','112','603']];
     for (var number in inputs) {
       var result = splitInput(inputs[number]);
       expect(result).toEqual(outputs[number]);
     }
+  });
 
+  it('should translate correctly', function() {
+    var inputs = ['43','112','603'];
+    var outputs = ['forty three million', 'one hundred and twelve thousand', 'six hundred and three'];
+    var result = translateString(inputs[number]);
+    expect(result).toEqual(outputs[number]);
   });
 
 });
