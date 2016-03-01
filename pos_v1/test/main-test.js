@@ -46,7 +46,7 @@ describe('pos', function() {
   it('should translate correctly', function() {
     var inputs = ['43','112','603'];
     var outputs = ['forty three million', 'one hundred and twelve thousand', 'six hundred and three'];
-    var result = translateString(inputs[number]);
+    var result = translateStr(inputs[number]);
     expect(result).toEqual(outputs[number]);
   });
 
