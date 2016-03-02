@@ -8,7 +8,7 @@ function splitInput(inputs){
 
   var restArr = inputs.substr(inputs.length%3).match(/.{1,3}/g);
   if (restArr != null) {
-    restArr.forEach(function(value){splitArr.push(value)})
+    restArr.forEach( function(value){splitArr.push(value)})
   }
   return splitArr;
 }
@@ -74,15 +74,19 @@ function getLastTwoBits(numberStr,dictionary){
 }
 
 function addUnit(translatedArr,units){
-  var reverseTranslatedArr = translatedArr.reverse();
+  translatedArr.reverse();
   var unitArr = [];
   translatedArr.forEach( function(element,index){
-    if (index != 0){
-      var unitElement = element + ' ' + units[index - 1];
+    if (element === '') return true;
+    if (index === 0){
+      unitArr.push(element);
     } else {
-      unitElement = element;
+      if (element != ''){
+        var unitElement = element + ' ' + units[index - 1];
+        unitArr.push(unitElement);
+      }
     }
-    unitArr.push(unitElement);
+
   });
   return unitArr.reverse();
 }
@@ -93,7 +97,8 @@ function mergeUnits(unitArr){
     if (index != 0){
       if (element.indexOf(' and ') < 0) {
         output = output + ' and ' + element;
-      }else {
+      }
+      else {
         output = output + ', ' + element;
       }
     } else {
